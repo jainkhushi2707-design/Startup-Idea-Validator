@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Idea Validator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">🚀 Idea<span>Check</span></div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#validator">Validate Idea</a>
+        <a href="#features">Features</a>
+    </nav>
+    <a href="#validator" class="nav-btn">Get Started</a>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="tag">✦ YOUR STARTUP JOURNEY STARTS HERE</span>
+        <h1>Is Your Startup Idea<br><span>Worth Building?</span></h1>
+        <p>Turn your big idea into a smarter business decision.
+           Evaluate your startup concept and discover opportunities for growth.</p>
+        <a href="#validator" class="primary-btn">Validate Your Idea →</a>
+        <div class="hero-stats">
+            <div><h3>01</h3><small>Submit Idea</small></div>
+            <div><h3>02</h3><small>Analyze</small></div>
+            <div><h3>03</h3><small>Get Insights</small></div>
+        </div>
+    </div>
+    <div class="hero-card">
+        <div class="rocket">🚀</div>
+        <h2>Think Big. Start Smart.</h2>
+        <p>Your next big business idea deserves a proper evaluation.</p>
+        <div class="mini-stat">
+            <span>Innovation starts with an idea</span>
+            <strong>✦</strong>
+        </div>
+    </div>
+</section>
+
+<section class="validator-section" id="validator">
+    <div class="section-heading">
+        <span class="tag">START YOUR ANALYSIS</span>
+        <h2>Validate Your <span>Startup Idea</span></h2>
+        <p>Enter your business details to receive an initial evaluation.</p>
+    </div>
+
+    <div class="form-card">
+        <form id="ideaForm">
+            <label for="ideaName">Startup / Business Name</label>
+            <input type="text" id="ideaName" placeholder="e.g. EcoCart" required>
+
+            <label for="category">Business Category</label>
+            <select id="category" required>
+                <option value="">Select category</option>
+                <option>Technology</option>
+                <option>Education</option>
+                <option>Healthcare</option>
+                <option>E-commerce</option>
+                <option>Food & Beverage</option>
+                <option>Environment</option>
+                <option>Finance</option>
+                <option>Other</option>
+            </select>
+
+            <label for="description">Describe Your Startup Idea</label>
+            <textarea id="description" rows="5"
+                placeholder="Explain your idea, product or service and how it solves a problem..."
+                required></textarea>
+
+            <label for="problem">What Problem Does It Solve?</label>
+            <textarea id="problem" rows="3"
+                placeholder="Describe the problem your startup addresses..."
+                required></textarea>
+
+            <label for="audience">Who Is Your Target Audience?</label>
+            <input type="text" id="audience"
+                placeholder="e.g. Students, working professionals..." required>
+
+            <label for="investment">Estimated Initial Investment</label>
+            <select id="investment" required>
+                <option value="">Select investment range</option>
+                <option>Below ₹10,000</option>
+                <option>₹10,000 - ₹50,000</option>
+                <option>₹50,000 - ₹1,00,000</option>
+                <option>₹1,00,000 - ₹5,00,000</option>
+                <option>Above ₹5,00,000</option>
+            </select>
+
+            <button type="submit" class="primary-btn submit-btn">
+                Analyze My Idea →
+            </button>
+        </form>
+    </div>
+
+    <div id="result" class="result-card hidden">
+        <span class="tag">YOUR INITIAL REPORT</span>
+        <h2 id="resultName">Your Startup</h2>
+        <div class="score-circle">
+            <span id="score">0</span>
+            <small>/100</small>
+        </div>
+        <h3 id="verdict"></h3>
+        <p id="resultDescription"></p>
+        <div class="analysis-grid">
+            <div><h3 id="problemScore">0</h3><p>Problem Clarity</p></div>
+            <div><h3 id="ideaScore">0</h3><p>Idea Detail</p></div>
+            <div><h3 id="marketScore">0</h3><p>Audience Clarity</p></div>
+        </div>
+        <h3>Suggestions for Improvement</h3>
+        <ul id="suggestions"></ul>
+        <p class="disclaimer">Note: This is a preliminary rule-based assessment, not a guarantee of business success.</p>
+        <button onclick="resetForm()" class="secondary-btn">Validate Another Idea</button>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <div class="section-heading">
+        <span class="tag">WHY IDEACHECK?</span>
+        <h2>Everything Starts With <span>An Idea</span></h2>
+    </div>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div>💡</div>
+            <h3>Idea Evaluation</h3>
+            <p>Review your startup concept and its problem-solving potential.</p>
+        </div>
+        <div class="feature-card">
+            <div>📊</div>
+            <h3>Instant Score</h3>
+            <p>Get a preliminary score based on the information you provide.</p>
+        </div>
+        <div class="feature-card">
+            <div>🎯</div>
+            <h3>Smart Suggestions</h3>
+            <p>Discover areas where you can improve your business idea.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="logo">🚀 Idea<span>Check</span></div>
+    <p>Turning Ideas Into Opportunities.</p>
+    <small>© 2026 IdeaCheck. All Rights Reserved.</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
